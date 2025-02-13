@@ -5,23 +5,23 @@ import profile from '../../public/images/siyoming.jpg';
 
 export default function Profile() {
   return (
-    <div className='absolute left-1/2 right-1/2 bg-orange-500 w-80 h-96 flex flex-col items-center'>
+    <section className='text-center mt-2'>
       <Image
         src={profile}
         alt='profile'
-        width={256}
-        height={256}
-        className='rounded-full bg-blue-600 w-64 h-64'
+        width={250}
+        height={250}
+        priority
+        className='rounded-full mx-auto'
       ></Image>
-      <h1>이시연</h1>
-      <p>걸밴드 QWER</p>
+      <h2 className='text-3xl font-bold mt-2'>이시연</h2>
+      <h3 className='text-xl font-semibold'>걸밴드 QWER</h3>
       <p>보컬 / 기타</p>
-      <Link
-        href='/contact'
-        className='w-28 p-1 text-center rounded-md bg-orange-300'
-      >
-        Contact Me
+      <Link href='/contact'>
+        <button className='py-1 px-4 mt-2 text-center rounded-xl bg-orange-300'>
+          Contact Me
+        </button>
       </Link>
-    </div>
+    </section>
   );
 }
